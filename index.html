@@ -134,11 +134,14 @@
                         <hr>
                         <span typeof="mw:File">
                             <a href="" class="mw-file-description">
-                                <img src="" decoding="async" width="300" height="555" class="mw-file-element"
-                                    data-file-width="512" data-file-height="948">
+                                <img src="https://superwiki.pages.dev/img/zone.png" decoding="async" width="300" class="mw-file-element zone">
+                                <img src="https://superwiki.pages.dev/img/moo.png" decoding="async" width="300" class="mw-file-element moo" style="display:none;">
                             </a>
                         </span>
-                        <div>ผลการเลือกตั้งตามเขตการเลือกตั้ง
+                        <div>
+                        <button id="zone">ผลการเลือกตั้งตามเขตการเลือกตั้ง</button>
+                        <button id="moo">ผลการเลือกตั้งตามหมู่บ้าน</button>
+                        <button id="all">แสดงทั้งหมด</button>
                             <style>
                                 .mw-parser-output .hlist dl,
                                 .mw-parser-output .hlist ol,
@@ -300,5 +303,22 @@
             โดยในแต่ละเขตเลือกตั้งจะมีสมาชิกสภาเทศบาลได้เขตละ 6 คน
         </p>
     </main>
+    <script>
+        document.getElementById('zone').addEventListener('click', function() {
+            document.querySelector('.zone').style.display = 'inline';
+            document.querySelector('.moo').style.display = 'none';
+        });
+        
+        document.getElementById('moo').addEventListener('click', function() {
+            document.querySelector('.zone').style.display = 'none';
+            document.querySelector('.moo').style.display = 'inline';
+        });
+        
+        document.getElementById('all').addEventListener('click', function() {
+            document.querySelector('.zone').style.display = 'inline';
+            document.querySelector('.moo').style.display = 'inline';
+        });
+    </script>
+
 </body>
 </html>
