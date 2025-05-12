@@ -119,3 +119,15 @@ ul {
 .hlist li {
     margin-right: 10px;
 }
+
+button#zone, button#moo, button#all {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
